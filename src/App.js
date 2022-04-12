@@ -1,43 +1,45 @@
 import "./App.css";
-import logo from "./logo.png";
-
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
+import { Sidebar, MobileNavigation, Header, RequireAuth } from "./components";
+import AppliedDrives from "./pages/applied-drives/AppliedDrives";
+import { Login } from "./pages/authentication/Login";
+import { Signup } from "./pages/authentication/Signup";
+import { Profile } from "./pages/authentication/Profile";
+import AllDrives from "./pages/all-drives/AllDrives";
+import UpcomingDrives from "./pages/upcoming-drives/UpcomingDrives";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} alt="mockBee logo" width="180" height="180" />
-        <h1 className="brand-title">
-          Welcome to <span>mockBee!</span>
-        </h1>
-        <p className="brand-description">
-          Get started by editing <code>src/App.js</code>
-        </p>
-        <div className="links">
-          <a
-            href="https://mockbee.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Explore mockBee
-          </a>
-          <a
-            href="https://mockbee.netlify.app/docs/api/introduction"
-            target="_blank"
-            rel="noreferrer"
-          >
-            API Documentation
-          </a>
-          <a
-            href="https://github.com/neogcamp/mockBee"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Contribute
-          </a>
-        </div>
-      </header>
-    </div>
-  );
+	return (
+		<div className="home-page-container">
+			<Header />
+			<div className="content-section">
+				<aside className="aside">
+					<Sidebar />
+				</aside>
+				<div className="main-section">
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route
+							path="/profile"
+							element={
+								<RequireAuth from="/profile">
+									<Profile />
+								</RequireAuth>
+							}
+						/>
+						<Route path="/drives" element={<AllDrives />} />
+						<Route path="/applied-drives" element={<AppliedDrives />} />
+						<Route path="/upcoming-drives" element={<UpcomingDrives />} />
+						<Route path="/login" element={<Login />} />
+						<Route path="/signup" element={<Signup />} />
+					</Routes>
+				</div>
+			</div>
+			<div className="mobile-nav">
+				<MobileNavigation />
+			</div>
+		</div>
+	);
 }
 
 export default App;
