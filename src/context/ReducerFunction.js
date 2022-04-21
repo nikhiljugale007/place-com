@@ -17,6 +17,12 @@ const ReducerFunction = (state, action) => {
 				drives: action.payload,
 			};
 		}
+		case "ADD_TO_APPLIED_DRIVE": {
+			return {
+				...state,
+				appliedDrives: action.payload,
+			};
+		}
 		case "RESET_VIDEO_STATE": {
 			return {
 				...state,

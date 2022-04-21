@@ -31,7 +31,7 @@ const AllDrives = () => {
 					appState.drives.map((item, index) => {
 						return (
 							<div key={index}>
-								<DriveCard drive={item} />
+								<DriveCard drive={item} cardType="simple_card" />
 							</div>
 						);
 					})

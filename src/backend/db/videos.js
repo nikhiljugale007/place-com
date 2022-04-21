@@ -19,6 +19,15 @@ export const videos = [
 		driveInfo: "3 rounds total. 1 Aptitude round 2 Coding Round 3 Interview",
 		driveDate: "01/06/2022",
 		lastDateToApply: "01/05/2022",
+		criteria: {
+			tenthScore: 60,
+			twelthScore: 60,
+			CGPA: 6,
+			activeBackLog: false,
+		},
+		applyLink: "https://www.google.com/",
+		testDetails:
+			"This is demo test info. DO not cheat in exam. Best luck for test",
 	},
 	{
 		_id: "Wo5dMEP_BbI",
@@ -35,6 +44,15 @@ export const videos = [
 		driveInfo: "3 rounds total. 1 Aptitude round 2 Coding Round 3 Interview",
 		driveDate: "01/06/2022",
 		lastDateToApply: "01/05/2022",
+		criteria: {
+			tenthScore: 60,
+			twelthScore: 60,
+			CGPA: 6,
+			activeBackLog: false,
+		},
+		applyLink: "https://www.google.com/",
+		testDetails:
+			"This is demo test info. DO not cheat in exam. Best luck for test",
 	},
 	{
 		_id: "Wo5dMEP_BbI",
@@ -51,6 +69,15 @@ export const videos = [
 		driveInfo: "3 rounds total. 1 Aptitude round 2 Coding Round 3 Interview",
 		driveDate: "01/06/2022",
 		lastDateToApply: "01/05/2022",
+		criteria: {
+			tenthScore: 60,
+			twelthScore: 60,
+			CGPA: 6,
+			activeBackLog: false,
+		},
+		applyLink: "https://www.google.com/",
+		testDetails:
+			"This is demo test info. DO not cheat in exam. Best luck for test",
 	},
 	{
 		_id: "Wo5dMEP_BbI",
@@ -67,6 +94,15 @@ export const videos = [
 		driveInfo: "3 rounds total. 1 Aptitude round 2 Coding Round 3 Interview",
 		driveDate: "01/06/2022",
 		lastDateToApply: "01/05/2022",
+		criteria: {
+			tenthScore: 60,
+			twelthScore: 60,
+			CGPA: 6,
+			activeBackLog: false,
+		},
+		applyLink: "https://www.google.com/",
+		testDetails:
+			"This is demo test info. DO not cheat in exam. Best luck for test",
 	},
 	{
 		_id: "Wo5dMEP_BbI",
@@ -83,6 +119,15 @@ export const videos = [
 		driveInfo: "3 rounds total. 1 Aptitude round 2 Coding Round 3 Interview",
 		driveDate: "01/06/2022",
 		lastDateToApply: "01/05/2022",
+		criteria: {
+			tenthScore: 60,
+			twelthScore: 60,
+			CGPA: 6,
+			activeBackLog: false,
+		},
+		applyLink: "https://www.google.com/",
+		testDetails:
+			"This is demo test info. DO not cheat in exam. Best luck for test",
 	},
 	{
 		_id: "Wo5dMEP_BbI",
@@ -99,6 +144,15 @@ export const videos = [
 		driveInfo: "3 rounds total. 1 Aptitude round 2 Coding Round 3 Interview",
 		driveDate: "01/06/2022",
 		lastDateToApply: "01/05/2022",
+		criteria: {
+			tenthScore: 60,
+			twelthScore: 60,
+			CGPA: 6,
+			activeBackLog: false,
+		},
+		applyLink: "https://www.google.com/",
+		testDetails:
+			"This is demo test info. DO not cheat in exam. Best luck for test",
 	},
 	{
 		_id: "Wo5dMEP_BbI",
@@ -115,6 +169,15 @@ export const videos = [
 		driveInfo: "3 rounds total. 1 Aptitude round 2 Coding Round 3 Interview",
 		driveDate: "01/06/2022",
 		lastDateToApply: "01/05/2022",
+		criteria: {
+			tenthScore: 60,
+			twelthScore: 60,
+			CGPA: 6,
+			activeBackLog: false,
+		},
+		applyLink: "https://www.google.com/",
+		testDetails:
+			"This is demo test info. DO not cheat in exam. Best luck for test",
 	},
 	{
 		_id: "Wo5dMEP_BbI",
@@ -131,6 +194,15 @@ export const videos = [
 		driveInfo: "3 rounds total. 1 Aptitude round 2 Coding Round 3 Interview",
 		driveDate: "01/06/2022",
 		lastDateToApply: "01/05/2022",
+		criteria: {
+			tenthScore: 60,
+			twelthScore: 60,
+			CGPA: 6,
+			activeBackLog: false,
+		},
+		applyLink: "https://www.google.com/",
+		testDetails:
+			"This is demo test info. DO not cheat in exam. Best luck for test",
 	},
 	{
 		_id: "Wo5dMEP_BbI",
@@ -147,5 +219,14 @@ export const videos = [
 		driveInfo: "3 rounds total. 1 Aptitude round 2 Coding Round 3 Interview",
 		driveDate: "01/06/2022",
 		lastDateToApply: "01/05/2022",
+		criteria: {
+			tenthScore: 60,
+			twelthScore: 60,
+			CGPA: 6,
+			activeBackLog: false,
+		},
+		applyLink: "https://www.google.com/",
+		testDetails:
+			"This is demo test info. DO not cheat in exam. Best luck for test",
 	},
 ];

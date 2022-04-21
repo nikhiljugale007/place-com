@@ -8,6 +8,7 @@ import { Signup } from "./pages/authentication/Signup";
 import { Profile } from "./pages/authentication/Profile";
 import AllDrives from "./pages/all-drives/AllDrives";
 import UpcomingDrives from "./pages/upcoming-drives/UpcomingDrives";
+import SingleDrive from "./pages/single-drive/SingleDrive";
 function App() {
 	return (
 		<div className="home-page-container">
@@ -28,6 +29,7 @@ function App() {
 							}
 						/>
 						<Route path="/drives" element={<AllDrives />} />
+						<Route path="/drives/:driveId" element={<SingleDrive />} />
 						<Route path="/applied-drives" element={<AppliedDrives />} />
 						<Route path="/upcoming-drives" element={<UpcomingDrives />} />
 						<Route path="/login" element={<Login />} />
