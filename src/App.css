@@ -5,10 +5,10 @@
 .content-section {
 	display: grid;
 	grid-template-columns: 20rem 1fr;
-	height: calc(100vh - 11rem);
+	height: calc(100vh - 5rem);
 	position: relative;
 	top: 6rem;
-}
+}	
 .aside {
 	height: 100%;
 	border-right: 2px solid var(--color-gray);
