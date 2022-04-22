@@ -3,8 +3,15 @@ import { useAppContext } from "../../context/Contex";
 import "./DriveCard.css";
 import { useState } from "react";
 const DriveCard = ({ drive, cardType }) => {
-  const { _id, companyName, role, roleDescription, ctc, lastDateToApply } =
-    drive;
+  const {
+    _id,
+    companyName,
+    role,
+    roleDescription,
+    ctc,
+    lastDateToApply,
+    applyLink,
+  } = drive;
   const { appState } = useAppContext();
   let lastDate = new Date(lastDateToApply);
   var dd = String(lastDate.getDate()).padStart(2, "0");
@@ -13,7 +20,7 @@ const DriveCard = ({ drive, cardType }) => {
   lastDate = mm + "/" + dd + "/" + yyyy;
 
   const curr_user = appState.userData.data;
-  console.log(appState.userData.data, drive.criteria);
+  // console.log(appState.userData.data, drive.criteria);
   const checkEligibility = () => {
     if (!appState.userData.isLoggedIn) {
       return true;
@@ -58,9 +65,20 @@ const DriveCard = ({ drive, cardType }) => {
             <Link to={`/drives/${_id}`} className="link-no-style">
               <button className="btn btn-text">Read More</button>
             </Link>
-            {cardType === "simple_card" && (
-              <button className="btn btn-text">Apply</button>
-            )}
+
+            {cardType === "simple_card" &&
+              (checkEligibility() ? (
+                <a
+                  href={applyLink}
+                  target="_blank"
+                  className="link-no-style"
+                  rel="noreferrer"
+                >
+                  <button className="btn btn-text">Apply</button>
+                </a>
+              ) : (
+                <button className="btn btn-text">Not eligible</button>
+              ))}
           </div>
         </div>
       </div>

@@ -75,6 +75,7 @@ const getWatchLater = async () => {
 };
 
 const addToLikedVideos = async (video) => {
+  console.log(video);
   try {
     const response = await axios.post(
       "/api/user/likes",

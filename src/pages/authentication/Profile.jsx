@@ -26,7 +26,6 @@ const Profile = () => {
     <div className="flex-vt-center g-1">
       <div className="full-width flex-hz-space-bw">
         <p className="typo-title">My Profile</p>
-        <p>Edit Profile</p>
         <button className="btn btn-outlined" onClick={signoutUser}>
           Sign Out
         </button>

@@ -1,3 +1,5 @@
+import { v4 as uuid } from "uuid";
+
 /**
  * Videos Database can be added here.
  * You can add videos of your wish with different attributes
@@ -5,7 +7,7 @@
 
 export const videos = [
   {
-    _id: "Wo5dMEP_BbI",
+    _id: uuid(),
     companyName: "Persistent Systems2",
     role: "Software enginner 3",
     ctc: "10 lpa",
@@ -30,7 +32,7 @@ export const videos = [
       "This is demo test info. DO not cheat in exam. Best luck for test",
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: uuid(),
     companyName: "Persistent Systems2",
     role: "Software enginner 2",
     ctc: "6.5 lpa",
@@ -55,7 +57,7 @@ export const videos = [
       "This is demo test info. DO not cheat in exam. Best luck for test",
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: uuid(),
     companyName: "Persistent Systems",
     role: "Software enginner 1",
     ctc: "4.71 lpa",
@@ -80,7 +82,7 @@ export const videos = [
       "This is demo test info. DO not cheat in exam. Best luck for test",
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: uuid(),
     companyName: "Persistent Systems2",
     role: "Software enginner 3",
     ctc: "10 lpa",
@@ -105,7 +107,7 @@ export const videos = [
       "This is demo test info. DO not cheat in exam. Best luck for test",
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: uuid(),
     companyName: "Persistent Systems2",
     role: "Software enginner 2",
     ctc: "6.5 lpa",
@@ -130,7 +132,7 @@ export const videos = [
       "This is demo test info. DO not cheat in exam. Best luck for test",
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: uuid(),
     companyName: "Persistent Systems",
     role: "Software enginner 1",
     ctc: "4.71 lpa",
@@ -155,7 +157,7 @@ export const videos = [
       "This is demo test info. DO not cheat in exam. Best luck for test",
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: uuid(),
     companyName: "Persistent Systems2",
     role: "Software enginner 3",
     ctc: "10 lpa",
@@ -180,7 +182,7 @@ export const videos = [
       "This is demo test info. DO not cheat in exam. Best luck for test",
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: uuid(),
     companyName: "Persistent Systems2",
     role: "Software enginner 2",
     ctc: "6.5 lpa",
@@ -205,7 +207,7 @@ export const videos = [
       "This is demo test info. DO not cheat in exam. Best luck for test",
   },
   {
-    _id: "Wo5dMEP_BbI",
+    _id: uuid(),
     companyName: "Persistent Systems",
     role: "Software enginner 1",
     ctc: "4.71 lpa",

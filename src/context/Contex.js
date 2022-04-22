@@ -15,6 +15,7 @@ const AppContextProvider = ({ children }) => {
     ReducerFunction,
     ContextInitialValue
   );
+  console.log(appState);
   return (
     <AppContext.Provider value={{ appState, appDispatch }}>
       {children}
