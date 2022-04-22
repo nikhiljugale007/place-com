@@ -12,7 +12,6 @@ const signupuser = async (user) => {
   }
 };
 const loginuser = async (user) => {
-  console.log(user);
   try {
     const response = await axios.post("/api/auth/login", {
       email: user.email,

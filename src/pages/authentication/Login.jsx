@@ -35,16 +35,12 @@ const Login = () => {
 
   const loginUserFun = async () => {
     const response = await loginuser(loginFormState);
-
-    console.log(response);
-
     if (response.success) {
       localStorage.setItem("token", response.data.encodedToken);
       appDispatch({
         type: "SET_LOGGED_USER",
         payload: response.data.foundUser,
       });
-      console.log(location);
       location.state === null ? navigate("/") : navigate(location?.state?.from);
     } else {
       console.log("SOME ERROR1");

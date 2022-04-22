@@ -16,6 +16,12 @@
 .text-highlight {
 	color: var(--danger-color);
 }
+.dropdown-menu{
+	padding: 1rem;
+	border:2px solid black;
+	border-radius: 5px;
+	font-size: 1.5rem;
+}
 @media screen and (max-width: 850px) {
 	.btn-menu {
 		display: block;

@@ -20,9 +20,9 @@ export const videos = [
     driveDate: new Date(2022, 4, 1),
     lastDateToApply: new Date(2022, 3, 1),
     criteria: {
-      tenthScore: 60,
-      twelthScore: 60,
-      CGPA: 6,
+      tenthScore: 90,
+      twelthScore: 80,
+      CGPA: 9,
       activeBackLog: false,
     },
     applyLink: "https://www.google.com/",

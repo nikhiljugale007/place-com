@@ -7,20 +7,20 @@ import { formatDate } from "../utils/authUtils";
  * */
 
 export const users = [
-	{
-		_id: uuid(),
-		firstName: "Adarsh",
-		lastName: "Balika",
-		email: "adarshbalika@gmail.com",
-		password: "adarshBalika123",
-		createdAt: formatDate(),
-		updatedAt: formatDate(),
-		currentClass: "Final Year",
-		CGPA: 8.8,
-		activeBackLog: false,
-		totalBacklogs: 0,
-		attendedCollegeTraining: true,
-		tenthScore: 90,
-		twelthScore: 80,
-	},
+  {
+    _id: uuid(),
+    firstName: "Adarsh",
+    lastName: "Balika",
+    email: "adarshbalika@gmail.com",
+    password: "adarshBalika123",
+    createdAt: formatDate(),
+    updatedAt: formatDate(),
+    currentClass: "Final Year",
+    CGPA: 8.8,
+    activeBackLog: false,
+    totalBacklogs: 0,
+    attendedCollegeTraining: true,
+    tenthScore: 70,
+    twelthScore: 65,
+  },
 ];
