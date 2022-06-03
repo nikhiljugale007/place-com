@@ -38,7 +38,6 @@ function Questions() {
 
   return (
     <div>
-      hi
       {questions.length !== answers.length ? (
         <LinearProgressWithLabel value={progress} className="progressBar" />
       ) : null}

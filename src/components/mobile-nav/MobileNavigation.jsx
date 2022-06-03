@@ -6,6 +6,7 @@ import {
   FaClock,
   FaThList,
   FaThumbsUp,
+  BsFillFileEarmarkCheckFill,
 } from "../../icons";
 import "./MobileNavigation.css";
 export const MobileNavigation = () => {
@@ -16,20 +17,21 @@ export const MobileNavigation = () => {
     border: "none",
   });
   return (
-    <div className="flex-hz-space-bw full-width mobile-nav-container ">
-      <NavLink
+    <div className="flex-hz full-width mobile-nav-container ">
+      {/* <NavLink
         to="/"
         className="sidebar-item link-no-style"
         style={getActiveStyle}
       >
         <FaHome size={20} /> <p>Home</p>
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to="/drives"
         className="sidebar-item link-no-style"
         style={getActiveStyle}
       >
-        <FaCompass size={20} /> <p>All Drives</p>
+        <FaCompass size={20} />
+        {/* <p>All Drives</p> */}
       </NavLink>
       <NavLink
         to="/applied-drives"
@@ -37,7 +39,8 @@ export const MobileNavigation = () => {
         style={getActiveStyle}
         state={{ from: location }}
       >
-        <FaThList size={20} /> <p>Applies Drives</p>
+        <FaThList size={20} />
+        {/* <p>Applies Drives</p> */}
       </NavLink>
       <NavLink
         to="/upcoming-drives"
@@ -45,7 +48,17 @@ export const MobileNavigation = () => {
         style={getActiveStyle}
         state={{ from: location }}
       >
-        <FaThumbsUp size={20} /> <p className="typo-subtext">Upcoming Drives</p>
+        <FaThumbsUp size={20} />
+        {/* <p className="typo-subtext">Upcoming Drives</p> */}
+      </NavLink>
+      <NavLink
+        to="/resume"
+        className="sidebar-item link-no-style "
+        style={getActiveStyle}
+        state={{ from: location }}
+      >
+        <BsFillFileEarmarkCheckFill size={20} />{" "}
+        {/* <p className="typo-subtext">Resume</p> */}
       </NavLink>
     </div>
   );

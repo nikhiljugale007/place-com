@@ -24,61 +24,29 @@ const loginuser = async (user) => {
   }
 };
 
-const getAllVideos = async () => {
+const getAllDrives = async () => {
   try {
-    const response = await axios.get("/api/videos");
-    return { videos: response.data.videos, success: true };
+    const response = await axios.get("/api/drives");
+    return { drives: response.data.drives, success: true };
   } catch (err) {
-    return { videos: [], success: false };
+    return { drives: [], success: false };
   }
 };
-const getVideoById = async (id) => {
+const getDriveById = async (id) => {
   try {
-    const response = await axios.get(`/api/video/${id}`);
-    return { video: response.data.video, success: true };
+    const response = await axios.get(`/api/drives/${id}`);
+    return { drive: response.data.drive, success: true };
   } catch (err) {
     console.log(err);
-    return { video: [], success: false };
-  }
-};
-const addToWatchLater = async (video) => {
-  try {
-    const response = await axios.post(
-      "/api/user/watchlater",
-      { video },
-      { headers }
-    );
-    return { watchlater: response.data.watchlater, success: true };
-  } catch (err) {
-    console.log(err);
-    return { watchlater: [], success: false };
-  }
-};
-const removeFromWatchLater = async (itemId) => {
-  try {
-    const response = await axios.delete(`/api/user/watchlater/${itemId}`, {
-      headers,
-    });
-    return { watchlater: response.data.watchlater, success: true };
-  } catch (err) {
-    return { watchlater: [], success: false };
-  }
-};
-const getWatchLater = async () => {
-  try {
-    const response = await axios.get("/api/user/watchlater", { headers });
-    return { watchlater: response.data.watchlater, success: true };
-  } catch (err) {
-    console.log(err);
-    return { watchlater: [], success: false };
+    return { drive: [], success: false };
   }
 };
 
-const addToLikedVideos = async (video) => {
+const addItemToAppliedDrive = async (video) => {
   console.log(video);
   try {
     const response = await axios.post(
-      "/api/user/likes",
+      "/api/user/applied",
       { video },
       { headers }
     );
@@ -98,162 +66,12 @@ const removeFromLikedVideos = async (itemId) => {
     return { likes: [], success: false };
   }
 };
-const getLikedVideos = async () => {
-  try {
-    const response = await axios.get("/api/user/likes", { headers });
-    return { likes: response.data.likes, success: true };
-  } catch (err) {
-    console.log(err);
-    return { likes: [], success: false };
-  }
-};
 
-const addToHistory = async (video) => {
-  try {
-    const response = await axios.post(
-      "/api/user/history",
-      { video },
-      { headers }
-    );
-    return { history: response.data.history, success: true };
-  } catch (err) {
-    console.log(err);
-    return { history: [], success: false };
-  }
-};
-const removeFromHistory = async (itemId) => {
-  try {
-    const response = await axios.delete(`/api/user/history/${itemId}`, {
-      headers,
-    });
-    return { history: response.data.history, success: true };
-  } catch (err) {
-    console.log(err);
-    return { history: [], success: false };
-  }
-};
-const removeAllFromHistory = async (itemId) => {
-  try {
-    const response = await axios.delete("/api/user/history/all", {
-      headers,
-    });
-    return { history: response.data.history, success: true };
-  } catch (err) {
-    return { history: [], success: false };
-  }
-};
-const getHistory = async () => {
-  try {
-    const response = await axios.get("/api/user/history", { headers });
-    return { history: response.data.history, success: true };
-  } catch (err) {
-    console.log(err);
-    return { history: [], success: false };
-  }
-};
-const getCategories = async () => {
-  try {
-    const response = await axios.get("/api/categories");
-    return { categories: response.data.categories, success: true };
-  } catch (err) {
-    console.log(err);
-    return {
-      categories: [],
-      success: false,
-    };
-  }
-};
-
-const getPlaylists = async () => {
-  try {
-    const response = await axios.get("/api/user/playlists", { headers });
-    return { playlists: response.data.playlists, success: true };
-  } catch (err) {
-    console.log(err);
-
-    return { playlists: [], success: false };
-  }
-};
-const addPlaylist = async (playlist) => {
-  try {
-    const response = await axios.post(
-      "/api/user/playlists",
-      { playlist },
-      { headers }
-    );
-    return { playlists: response.data.playlists, success: true };
-  } catch (err) {
-    console.log(err);
-    return { playlists: [], success: false };
-  }
-};
-const removePlaylist = async (id) => {
-  try {
-    const response = await axios.delete(`api/user/playlists/${id}`, {
-      headers,
-    });
-    return { playlists: response.data.playlists, success: true };
-  } catch (err) {
-    console.log(err);
-    return { playlists: [], success: false };
-  }
-};
-const getPlaylistById = async (id) => {
-  try {
-    const response = await axios.get(`/api/user/playlists/${id}`, { headers });
-    return { playlist: response.data.playlist, success: true };
-  } catch (err) {
-    console.log(err);
-    return { playlist: [], success: true };
-  }
-};
-const addToSpecificPlaylist = async (id, currentVideo) => {
-  try {
-    const response = await axios.post(
-      `/api/user/playlists/${id}`,
-      { video: currentVideo },
-      { headers }
-    );
-    return { playlist: response.data.playlist, success: true };
-  } catch (err) {
-    console.log(err);
-    return { playlist: [], success: false };
-  }
-};
-const deleteFromSpecificPlaylist = async (playlist_id, video_id) => {
-  try {
-    const response = await axios.delete(
-      `/api/user/playlists/${playlist_id}/${video_id}`,
-      {
-        headers,
-      }
-    );
-    return { playlist: response.data.playlist, success: true };
-  } catch (err) {
-    console.log(err);
-    return { playlist: [], success: false };
-  }
-};
 export {
-  getAllVideos,
-  getVideoById,
-  addToWatchLater,
-  removeFromWatchLater,
-  getWatchLater,
-  addToLikedVideos,
+  getAllDrives,
+  getDriveById,
+  addItemToAppliedDrive,
   removeFromLikedVideos,
-  getLikedVideos,
-  addToHistory,
-  removeFromHistory,
-  removeAllFromHistory,
-  getHistory,
   signupuser,
   loginuser,
-  getCategories,
-  getPlaylists,
-  addPlaylist,
-  removePlaylist,
-  getPlaylistById,
-  addToSpecificPlaylist,
-  deleteFromSpecificPlaylist,
 };

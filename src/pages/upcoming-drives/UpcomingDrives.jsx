@@ -6,7 +6,7 @@ const UpcomingDrives = () => {
   const { appState } = useAppContext();
   const [filteredDrive, setFilteredDrives] = useState([]);
   useEffect(() => {
-    var today = new Date(2022, 4, 21);
+    var today = new Date(2022, 6, 4);
     setFilteredDrives([]);
     appState.drives.map((drive) => {
       const drive_date = new Date(drive.lastDateToApply);
@@ -15,7 +15,12 @@ const UpcomingDrives = () => {
       } else {
       }
     });
-  }, []);
+    setFilteredDrives((prev) =>
+      prev.sort(
+        (a, b) => new Date(a.lastDateToApply) - new Date(b.lastDateToApply)
+      )
+    );
+  }, [appState.drives]);
   return (
     <div className="page-container">
       <p className="typo-title flex-hz-center">Upcoming Drives</p>

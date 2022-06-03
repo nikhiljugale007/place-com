@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { addToLikedVideos, getVideoById } from "../../api/apicalls";
+import { addItemToAppliedDrive, getDriveById } from "../../api/apicalls";
 import { useAppContext } from "../../context/Contex";
 import "./SingleDrive.css";
 const SingleDrive = () => {
@@ -11,9 +11,9 @@ const SingleDrive = () => {
   const navigate = useNavigate();
   const getVideo = async () => {
     setLoading(true);
-    const response = await getVideoById(driveId);
+    const response = await getDriveById(driveId);
     if (response.success) {
-      setDriveInfo(response.video);
+      setDriveInfo(response.drive);
       setLoading(false);
     } else {
       alert("Error!. Check Console");
@@ -32,7 +32,7 @@ const SingleDrive = () => {
   };
   const addToAppliedDrives = async () => {
     if (checkLoggedUser()) {
-      const response = await addToLikedVideos(driveInfo);
+      const response = await addItemToAppliedDrive(driveInfo);
       console.log(response);
       if (response.success) {
         appDispatch({ type: "ADD_TO_APPLIED_DRIVE", payload: response.likes });

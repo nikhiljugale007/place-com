@@ -10,9 +10,9 @@ import { Response } from "miragejs";
  * send GET Request at /api/videos
  * */
 
-export const getAllVideosHandler = function () {
+export const getAllDrivesHandler = function () {
   try {
-    return new Response(200, {}, { videos: this.db.videos });
+    return new Response(200, {}, { drives: this.db.drives });
   } catch (error) {
     return new Response(
       500,
@@ -36,11 +36,11 @@ export const getAllVideosHandler = function () {
  * send GET Request at /api/user/videos/:videoId
  * */
 
-export const getVideoHandler = function (schema, request) {
-  const { videoId } = request.params;
+export const getDriveHandler = function (schema, request) {
+  const { driveId } = request.params;
   try {
-    const video = schema.videos.findBy({ _id: videoId }).attrs;
-    return new Response(200, {}, { video });
+    const drive = schema.drives.findBy({ _id: driveId }).attrs;
+    return new Response(200, {}, { drive });
   } catch (error) {
     return new Response(
       500,
