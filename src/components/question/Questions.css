@@ -1,0 +1,15 @@
+.root{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 80vh;
+}
+.progressBar{
+      margin: 1rem;
+}
+.question{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+}

@@ -1,0 +1,29 @@
+.buttonBuildNew{
+      cursor: pointer;
+      min-width: 7rem;
+      text-align: center;
+      border: none;
+      padding: 1rem;
+}
+.buttonBuildNew:hover{
+      background: "#d6d6d6";
+}
+.buttonDownload{
+      cursor: pointer;
+      min-width: 7rem;
+      text-align: center;
+      border: none;
+      padding: 1rem;
+      box-shadow: 0 1px 1px 0 rgb(0 0 0 / 20%), 0 1px 2px 0 rgb(0 0 0 / 19%);
+      background: "#77bb77";
+}
+.buttonDownload:hover{
+      background-color: "#548854";
+}
+.resume{
+      padding: 3rem;
+      box-shadow: 0 0.5rem 1rem 0 rgb(0 0 0/ 10%);
+      margin-bottom: 1rem;
+      margin: 1rem;
+      margin-top: 3rem;
+}

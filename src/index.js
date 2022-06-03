@@ -9,12 +9,10 @@ import { AppContextProvider } from "./context/Contex";
 makeServer();
 
 ReactDOM.render(
-	<React.StrictMode>
-		<BrowserRouter>
-			<AppContextProvider>
-				<App />
-			</AppContextProvider>
-		</BrowserRouter>
-	</React.StrictMode>,
-	document.getElementById("root")
+  <BrowserRouter>
+    <AppContextProvider>
+      <App />
+    </AppContextProvider>
+  </BrowserRouter>,
+  document.getElementById("root")
 );

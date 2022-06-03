@@ -11,6 +11,7 @@ import { Profile } from "./pages/authentication/Profile";
 import AllDrives from "./pages/all-drives/AllDrives";
 import UpcomingDrives from "./pages/upcoming-drives/UpcomingDrives";
 import SingleDrive from "./pages/single-drive/SingleDrive";
+import { ResumePage } from "./pages/resume-builder/ResumePage";
 function App() {
   return (
     <div className="home-page-container">
@@ -37,6 +38,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/admin" element={<Mockman />} />
+            <Route path="/resume" element={<ResumePage />} />
           </Routes>
         </div>
       </div>
