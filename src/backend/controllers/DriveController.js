@@ -51,3 +51,5 @@ export const getDriveHandler = function (schema, request) {
     );
   }
 };
+
+export const editDriveHandler = function (schema, request) {};

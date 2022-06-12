@@ -35,6 +35,7 @@ const Login = () => {
 
   const loginUserFun = async () => {
     const response = await loginuser(loginFormState);
+    console.log(loginFormState);
     if (response.success) {
       localStorage.setItem("token", response.data.encodedToken);
       appDispatch({
@@ -65,8 +66,8 @@ const Login = () => {
   const fillDemoCredentials = () => {
     setLoginFormState((prev) => ({
       ...prev,
-      email: "adarshbalika@gmail.com",
-      password: "adarshBalika123",
+      email: "nikhiljugale007@gmail.com",
+      password: "Nikhil@123",
     }));
   };
 

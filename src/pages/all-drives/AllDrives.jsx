@@ -6,7 +6,7 @@ import "./AllDrives.css";
 const AllDrives = () => {
   const { appState, appDispatch } = useAppContext();
   const [loading, setLoading] = useState(false);
-  const getVideos = async () => {
+  const getDrives = async () => {
     const response = await getAllDrives();
     if (response.success) {
       appDispatch({ type: "SET_DRIVES", payload: response.drives });
@@ -16,7 +16,7 @@ const AllDrives = () => {
   };
   useEffect(() => {
     setLoading(true);
-    getVideos();
+    getDrives();
     setTimeout(() => {
       setLoading(false);
     }, 2000);

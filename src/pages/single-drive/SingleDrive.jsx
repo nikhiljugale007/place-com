@@ -9,7 +9,7 @@ const SingleDrive = () => {
   const [driveInfo, setDriveInfo] = useState({});
   const { appState, appDispatch } = useAppContext();
   const navigate = useNavigate();
-  const getVideo = async () => {
+  const getDrive = async () => {
     setLoading(true);
     const response = await getDriveById(driveId);
     if (response.success) {
@@ -20,7 +20,7 @@ const SingleDrive = () => {
     }
   };
   useEffect(() => {
-    getVideo();
+    getDrive();
   }, []);
 
   const checkLoggedUser = () => {
@@ -33,12 +33,16 @@ const SingleDrive = () => {
   const addToAppliedDrives = async () => {
     if (checkLoggedUser()) {
       const response = await addItemToAppliedDrive(driveInfo);
-      console.log(response);
-      if (response.success) {
-        appDispatch({ type: "ADD_TO_APPLIED_DRIVE", payload: response.likes });
-      } else {
-        console.log("error");
-      }
+      const applied = [...appState.appliedDrives, driveInfo];
+      console.log("APP = ", applied);
+      appDispatch({ type: "ADD_TO_APPLIED_DRIVE", payload: applied });
+
+      // console.log(response);
+      // if (response.success) {
+      //   appDispatch({ type: "ADD_TO_APPLIED_DRIVE", payload: response.likes });
+      // } else {
+      //   console.log("error");
+      // }
     }
   };
   const checkEligibility = () => {

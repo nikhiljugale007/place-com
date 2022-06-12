@@ -11,6 +11,11 @@ import { addItemToAppliedDrive } from "./backend/controllers/AppliedController";
 import { drives } from "./backend/db/drive";
 import { categories } from "./backend/db/categories";
 import { users } from "./backend/db/users";
+import {
+  editUserHandler,
+  getAllUsersHandler,
+  getUserHandler,
+} from "./backend/controllers/UserController";
 
 export function makeServer({ environment = "development" } = {}) {
   return new Server({
@@ -39,10 +44,6 @@ export function makeServer({ environment = "development" } = {}) {
       users.forEach((item) =>
         server.create("user", {
           ...item,
-          likes: [],
-          watchlater: [],
-          history: [],
-          playlists: [],
         })
       );
     },
@@ -53,13 +54,16 @@ export function makeServer({ environment = "development" } = {}) {
       this.post("/auth/signup", signupHandler.bind(this));
       this.post("/auth/login", loginHandler.bind(this));
 
-      // video routes (public)
+      // drive routes (public)
       this.get("/drives", getAllDrivesHandler.bind(this));
       this.get("drives/:driveId", getDriveHandler.bind(this));
 
       this.post("/user/applied", addItemToAppliedDrive.bind(this));
 
-
+      //admin routes
+      this.get("/users", getAllUsersHandler.bind(this));
+      this.get("/users/:userId", getUserHandler.bind(this));
+      this.post("users/edit", editUserHandler.bind(this));
     },
   });
 }

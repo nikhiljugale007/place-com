@@ -50,6 +50,7 @@ const addItemToAppliedDrive = async (video) => {
       { video },
       { headers }
     );
+    console.log(response);
     return { likes: response.data.likes, success: true };
   } catch (err) {
     console.log(err);

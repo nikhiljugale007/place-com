@@ -19,6 +19,8 @@ function Question() {
           name={questionAnswer.resumeFieldId}
           value={questionAnswer.answer ? questionAnswer.answer : ""}
           onChange={handleChangeInput}
+          inputProps={{ style: { fontSize: 20, fontWeight: 500 } }}
+          InputLabelProps={{ style: { fontWeight: 400 } }}
         />
         <div className="buttonContainer">
           <button

@@ -44,7 +44,6 @@ const Signup = () => {
       password: signUpFormState.password,
       name: signUpFormState.name,
     };
-    console.log(post_obj);
     const response = await signupuser(post_obj);
     if (response.success) {
       navigate("/login");
